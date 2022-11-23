@@ -4,8 +4,8 @@
 
 
 ## About Project
-Usr: Admin
-Pwd: 123456
+- Usr: Admin
+- Pwd: 123456
 
 This is small full stack Project
 
