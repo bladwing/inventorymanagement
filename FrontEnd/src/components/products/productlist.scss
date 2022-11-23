@@ -1,0 +1,55 @@
+
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: middle !important;
+  border-top: 1px solid #dee2e6;
+}
+table {
+  border-collapse: separate;
+}
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  justify-content: space-around;
+  margin: 10px auto;
+  width: 90%;
+  min-width: 320px;
+  padding-bottom: 2%;
+
+  .listEmptyContainer {
+    margin: 1% auto;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    img {
+      width: 50%;
+    }
+    h3 {
+      margin-top: 30px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .productCard {
+    display: flex;
+    margin-top: 25px;
+    width: 98%;
+    height: 100px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    border-radius: 10px;
+    .cardItem {
+      margin-top: 17px;
+      width: 20%;
+      .delete-checkbox {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.productCard:hover {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 2px 4px 0px,
+    rgba(3, 102, 214, 0.3) 0px 2px 16px 0px;
+}

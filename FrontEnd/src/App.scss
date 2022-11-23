@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'alk-sanet';
+  src: url("../src/assets/fonts/alk-sanet.ttf");
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+  min-height: 650px;
+
+  img {
+    width: 15%;
+    padding: 1%;
+
+  }
+
+  nav ul {
+    list-style: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  footer {
+    margin: 10% auto;
+    width: 90%;
+
+  }
+}
+
+.TopContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 89%;
+  margin: 0 auto;
+
+  .ButtonContainer {
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.PageNotFoundContainer {
+  min-height: 600px;
+  margin-top: 10%;
+}
+
+.homePage {
+  width: 30%;
+  margin: 3% auto 10%;
+  border-radius: 20px;
+  min-width: 350px;
+  min-height: 250px;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button,
+a {
+  font-family: 'alk-sanet';
+}
+
+.Container {
+  min-height: 400px;
+}
+
+.loader-container {
+  width: 71%;
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+  border-radius: 50%;
+  animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.EditProductContainer {
+  min-height: 650px;
+  border-radius: 20px;
+  width: 35%;
+  margin: 2% auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    h4 {
+      padding: 20px;
+    }
+  .product_form {
+    margin: 10px auto;
+    width: 60%;
+    transition: 2s;
+    font-family: 'Kanit', sans-serif;
+
+    .message {
+      width: 100%;
+      height: 10px;
+      font-size: 17px;
+      margin-top: 15px;
+      font-weight: 500;
+      color: rgb(233, 13, 13);
+      font-family: "Kanit", sans-serif;
+    }
+
+    .mainTable {
+      border-collapse: unset;
+      margin-top: 10px;
+    }
+
+    input {
+      color: rgb(18, 36, 136);
+      font-weight: 400;
+    }
+
+    input[type=checkbox] {
+      width: 8%;
+      border: 0;
+    }
+
+
+    .save {
+      margin-top: 10px;
+    }
+
+    .cancel {
+      height: 16px;
+      margin-top: 51%;
+    }
+
+    .AditionalContainer {
+      width: 55%;
+      text-align: center;
+      height: 130px;
+      margin-left: 15px;
+
+      th {
+        width: 50px;
+      }
+    }
+  }
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.addPageButton {
+  position: relative;
+}
+
+[data-input][type="number"]::-webkit-inner-spin-button,
+[data-input][type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.divBook,
+.divDisk,
+.divFurniture {
+  margin-left: 16%;
+
+  input {
+    width: 120px;
+    margin-left: 50px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  label {
+    width: 20px;
+  }
+
+  h6 {
+    margin-top: 30px;
+
+  }
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600");
+
+
+
+main {
+	background: #fff;
+	margin: 0 auto;
+	max-width: 680px;
+	padding: 50px 30px;
+}
+
+
+code {
+	background: #f4f6fc;
+	border-radius: 5px;
+	color: #2d4284;
+	font-family: monospace;
+	padding: 4px 8px;
+}
+
+.modal__backdrop {
+	background: rgba(0, 0, 0, .65);
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.modal__container {
+	background: #fff;
+	border-radius: 5px;
+	max-width: 100%;
+	margin: 50px auto;
+	padding: 15px;
+	width: 560px;
+}
+
+.modal__title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}

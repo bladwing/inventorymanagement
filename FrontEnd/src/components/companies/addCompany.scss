@@ -1,0 +1,48 @@
+.addCompanyContainer {
+  width: 40%;
+  min-height: 400px;
+  margin: 3% auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 20px;
+h4{
+  padding: 40px;
+}
+  .company_form {
+    margin: 1% auto;
+    width: 60%;
+    min-width: 340px;
+    
+    transition: 2s;
+    font-family: 'Kanit', sans-serif;
+
+    .message {
+      width: 200px;
+      height: 10px;
+      font-size: 17px;
+      margin-top: 15px;
+      font-weight: 500;
+      color: rgb(233, 13, 13);
+      font-family: "Kanit", sans-serif;
+    }
+
+    .mainTable {
+      border-collapse: unset;
+    }
+
+    input {
+      color: rgb(18, 36, 136);
+      font-weight: 400;
+    }
+
+    .save {
+      margin-top: 10px;
+    }
+
+    .cancel {
+      height: 16px;
+      margin-top: 51%;
+    }
+
+  }
+}
