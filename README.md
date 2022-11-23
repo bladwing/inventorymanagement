@@ -26,7 +26,7 @@ React JS version: 18.2.0
 - In React logic I using [Hooks](https://reactjs.org/docs/hooks-intro.html) 
 - For visual side - [sass](https://sass-lang.com/) module. 
 - Request generated with [Axios](https://axios-http.com/docs/intro) HTTP client and sending to NODE server(Back-End).
-- React App uploaded on [Netlify](https://productlistcrud.netlify.app/) hosting.
+- React App will be uploaded on [Netlify](https://productlistcrud.netlify.app/) hosting.
 
 
 ### :green_circle: Back-End
