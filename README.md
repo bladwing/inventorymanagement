@@ -35,8 +35,4 @@ NODE JS version: v16.14.0
 
 This is small API CRUD server and can receive request from Front-End Side. <br/>:arrow_right: (Create - Read - Update - Delete) 	:arrow_left:
 
-Node Server uploaded on [Heroku](https://nodeapicrud.herokuapp.com/) hosting.
-
-Also you can check git Repository [Here](https://github.com/bladwing/nodecrudapi).
-
 ---
