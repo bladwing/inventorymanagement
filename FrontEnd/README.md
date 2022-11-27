@@ -1,4 +1,4 @@
-# Draft in progress ....![](https://i.imgur.com/hkpQOyy.gif)
+# Draft in progress ....!<img src="https://i.imgur.com/hkpQOyy.gif" width="40" height="40" />
 
 
 
@@ -15,7 +15,7 @@ I use several technologies:
 
 
 
-## Technical Side
+## Technical Information
 
 
 ### :green_circle: Front-End 
@@ -35,3 +35,67 @@ NODE JS version: v16.14.0
 This is small API CRUD server and can receive request from Front-End Side. <br/>:arrow_right: (Create - Read - Update - Delete) 	:arrow_left:
 
 ---
+
+Why I choose Netlify and Heroku? 💡
+
+Easy to use and free
+Connected to Git Repositories
+Auto Deploy & Bilding projects
+Checking Errors and Dependencies
+Good online "show room"
+Free SSL certificate
+
+
+🟢 DataBase
+mySQL version: 5.7.39
+
+Requests map seems like:
+
+React App (requests) ➡️ NODE server (requests) ➡️ mySQL database
+React App (requests)⬅️ NODE server (requests) ⬅️ mySQL database
+
+
+🟢 How to use?
+
+If you need to start my project on your computer, you need to done several steps:
+
+### React App :atom:
+
+Open => [Git Bash](https://git-scm.com/downloads)
+
+cd c:/"WorkingDirectory" for example my directory is "c:/web"
+
+git clone git@github.com:bladwing/inventorymanagement.git
+cd inventorymanagement/FrontEnd
+npm i
+npm start
+
+localhost:3000
+
+
+### Node Server :electron:
+
+Open another => [Git Bash](https://git-scm.com/downloads)
+cd inventorymanagement/BackEnd
+npm i
+npx nodemon
+
+localhost:5000
+
+
+### Create mySQL server 
+I using [XAMPP](https://www.apachefriends.org/index.html) development environment
+
+inventorymanagement/config/invstock.sql
+
+Create in phpMyAdmin panel table with name - invstock
+
+Import database from file invstock.sql to your table - invstock
+
+
+Enjoy Life.
+
+## How to use? :underage:
+
+
+
