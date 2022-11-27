@@ -132,35 +132,45 @@ Fill simple form, after save => you redirect to companies
 ![](https://i.imgur.com/3poMNz1.png)
 
 
+
+---
+
 ### Stock
 
 ![](https://i.imgur.com/bg5zxxw.png)
+
+
+---
 
 
 ### Add Product
 
 ![](https://i.imgur.com/Yfmz96e.png)
 
+
+---
+
 ### Edit Product
 
 ![](https://i.imgur.com/IOZQxtM.png)
+
+
+---
 
 ### Sell Product
 
 ![](https://i.imgur.com/0EyFSmt.png)
 
+
+---
+
 ### Sold Product
 
 ![](https://i.imgur.com/RSAwz5V.png)
 
+
+---
+
 ### Sold Product Detail
 
 ![](https://i.imgur.com/vxHJM7B.png)
-
-
-
-
-
-
-
-
