@@ -54,7 +54,7 @@ export default function ProductList() {
               <th scope="col">Name</th>
               <th scope="col">Document</th>
               <th scope="col">Piece price</th>
-              <th scope="col">Pieces</th>
+              <th scope="col">Amount</th>
               <th scope="col">Total</th>
               <th scope="col">Action</th>
             </tr>
@@ -103,7 +103,7 @@ export default function ProductList() {
                     []
                   )}
                   {product.pieces !== null && product.pieces !== 0 ? (
-                    <>{product.pieces} piece</>
+                    <>{product.pieces} Pieces</>
                   ) : (
                     []
                   )}

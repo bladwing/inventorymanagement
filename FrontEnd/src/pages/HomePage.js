@@ -1,46 +1,47 @@
 import Auth from "../components/auth/Auth";
 import { userName } from "../utils/login";
+import profile from "../utils/profile.json";
 
 const HomePage = () => {
-    return (
-      <div className="Container">
-        {userName !== null ? (
-          <div className="homePage">
-            <table
-              cellSpacing={10}
-              style={{
-                margin: "2% auto",
-                textAlign: "left",
-              }}
-            >
-              <thead>
+  return (
+    <div className="Container">
+      {userName !== null ? (
+        <div className="homePage">
+          <table
+            cellSpacing={10}
+            style={{
+              margin: "2% auto",
+              textAlign: "left",
+            }}
+          >
+            {profile.map((info) => {
+              return (
+              <thead key={info.companyName}>
                 <tr>
                   <th>Company Name:</th>
-                  <td>Sunrise</td>
+                  <td>{info.companyName}</td>
                 </tr>
                 <tr>
                   <th>Company Code:</th>
-                  <td>404404404</td>
+                  <td>{info.CompanyCode}</td>
                 </tr>
                 <tr>
                   <th>Bank Account:</th>
-                  <td>GE01TB0101010101010011</td>
+                  <td>{info.BankAccount}</td>
                 </tr>
                 <tr>
                   <th>Address:</th>
-                  <td>
-                    New York str.1
-                  </td>
+                  <td>{info.Address}</td>
                 </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        ) : (
-          <Auth />
-        )}
-      </div>
-    );
-  };
+              </thead>)
+            })}
+          </table>
+        </div>
+      ) : (
+        <Auth />
+      )}
+    </div>
+  );
+};
 
-  export default HomePage;
+export default HomePage;
