@@ -97,5 +97,70 @@ Enjoy Life.
 
 ## How to use? :underage:
 
+After installation Follow link - localhost:3000
+
+Login: Admin
+Password: 123456
+
+![](https://i.imgur.com/V8TyQqw.png)
+
+
+
+---
+### Login
+After login you get Main Page
+Here you have information about your company.
+
+![](https://i.imgur.com/YEDto0m.png)
+
+
+
+
+
+---
+
+
+### Companies
+For this moment you can remove or add company
+
+![](https://i.imgur.com/Pk3F1Nw.png)
+
+### Add Company
+
+Fill simple form, after save => you redirect to companies
+
+![](https://i.imgur.com/3poMNz1.png)
+
+
+### Stock
+
+![](https://i.imgur.com/bg5zxxw.png)
+
+
+### Add Product
+
+![](https://i.imgur.com/Yfmz96e.png)
+
+### Edit Product
+
+![](https://i.imgur.com/IOZQxtM.png)
+
+### Sell Product
+
+![](https://i.imgur.com/0EyFSmt.png)
+
+### Sold Product
+
+![](https://i.imgur.com/RSAwz5V.png)
+
+### Sold Product Detail
+
+![](https://i.imgur.com/vxHJM7B.png)
+
+
+
+
+
+
 
 
