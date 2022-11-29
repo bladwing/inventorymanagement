@@ -6,6 +6,7 @@ import EditProduct from "./pages/EditProduct";
 import Salled from "./components/Sold/Sold";
 import SoldDetail from "./components/Sold/SoldDetail";
 
+
 import AddCompanies from "./pages/AddCompany";
 import Companies from "./pages/Companies";
 
@@ -21,10 +22,12 @@ import Navigation from "./components/Navigation";
 function App() {
   return (
     <div className="App">
+        
       <BrowserRouter>
         <Link to="/">
           <img src={Logo} alt="logo" />
         </Link>
+    
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -39,7 +42,6 @@ function App() {
               <Route path="/companies" element={<Companies />} />
               <Route path="/addcompanies" element={<AddCompanies />} />
               <Route path="/salled/:id" element={<SoldDetail />} />
-
               <Route
                 path="/products/editproduct/:id"
                 element={<EditProduct />}
@@ -60,13 +62,6 @@ const Saled = () => {
   return (
     <div>
       <Salled />
-    </div>
-  );
-};
-const Users = () => {
-  return (
-    <div>
-      <CreateUser />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Auth from "../components/auth/Auth";
+import Guide from "../components/guide/Guide";
 import { userName } from "../utils/login";
 import profile from "../utils/profile.json";
 
@@ -14,6 +15,7 @@ const HomePage = () => {
               textAlign: "left",
             }}
           >
+           
             {profile.map((info) => {
               return (
               <thead key={info.companyName}>
@@ -35,6 +37,7 @@ const HomePage = () => {
                 </tr>
               </thead>)
             })}
+          
           </table>
         </div>
       ) : (

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../utils/api";
 import "./auth.scss";
+import Guide from "../guide/Guide";
 
 const Auth = () => {
   const [Login, setLogin] = useState([]);
@@ -46,18 +47,23 @@ const Auth = () => {
 
   return (
     <div className="AuthForm">
+       
       <h5 style={{ height: "10px", color: "red" }}>{Error}</h5>
 
       {isLogged === true ? (
         <div className="profile"></div>
       ) : (
         <form onSubmit={Submit}>
+        
           <table className="AuthFormTbl">
+      
             <thead>
+           
               <tr>
                 <td>
                   <h3>Please Sign In</h3>
                 </td>
+                
               </tr>
             </thead>
             <tbody>
@@ -88,7 +94,9 @@ const Auth = () => {
                   <button className="btn btn-primary">Enter</button>
                 </td>
               </tr>
+              <Guide/>
             </tbody>
+       
           </table>
         </form>
       )}
