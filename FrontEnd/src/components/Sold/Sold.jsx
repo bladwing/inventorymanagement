@@ -46,7 +46,7 @@ const Sold = () => {
                     <th>Code</th>
                     <th>Name</th>
                     <th>Document</th>
-                    <th>Saller</th>
+                    <th>Seller</th>
                     <th>Buyer</th>
                   </tr>
                 </thead>

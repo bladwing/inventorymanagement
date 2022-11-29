@@ -50,7 +50,7 @@ export default function AddProduct() {
           <tbody>
             <tr>
               <th>
-                <label>Company Name: </label>
+                <label>Name: </label>
               </th>
               <td>
                 <input

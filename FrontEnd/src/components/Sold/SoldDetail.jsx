@@ -105,7 +105,7 @@ const SoldDetail = () => {
               <td>{Products.price * Products.pieces} ₾</td>
             </tr>
             <tr>
-              <th>Costumer</th>
+              <th>Customer</th>
               <td>{Products.soldtocompany}</td>
             </tr>
             <tr>
