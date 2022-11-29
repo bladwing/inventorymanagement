@@ -6,7 +6,7 @@ import "./auth.scss";
 
 const Auth = () => {
   const [Login, setLogin] = useState([]);
-  const [users, setUsers] = useState('');
+  const [users, setUsers] = useState("");
   const [isLogged, setIsLogged] = useState(false);
   const [Password, setPassword] = useState();
   const [Error, setError] = useState();
@@ -42,12 +42,10 @@ const Auth = () => {
         navigate("/") ||
         window.location.reload(true)
       : setError("Login or Password not correct");
-  }
-
+  };
 
   return (
     <div className="AuthForm">
-      <h3>Please Sign In</h3>
       <h5 style={{ height: "10px", color: "red" }}>{Error}</h5>
 
       {isLogged === true ? (
@@ -55,6 +53,13 @@ const Auth = () => {
       ) : (
         <form onSubmit={Submit}>
           <table className="AuthFormTbl">
+            <thead>
+              <tr>
+                <td>
+                  <h3>Please Sign In</h3>
+                </td>
+              </tr>
+            </thead>
             <tbody>
               <tr>
                 <td>
@@ -67,7 +72,7 @@ const Auth = () => {
                   />
                 </td>
               </tr>
-              <tr>
+              <tr style={{ paddingTop: "-40px", marginTop: "-40px" }}>
                 <td>
                   <input
                     name="pass"

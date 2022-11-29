@@ -4,12 +4,19 @@
     text-align: left;
   }
   .AuthFormTbl {
-    width: 60%;
-    margin: 3% auto;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 20px;
+    min-width: 350px;
+    min-height: 250px;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     input {
       text-align: center;
       margin: 10px;
+      border-radius: 8px;
+      border: 1px;
     }
   }
-
+  input:focus { outline: 1px solid skyblue; }
 }
