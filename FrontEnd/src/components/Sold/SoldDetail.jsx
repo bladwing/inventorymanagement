@@ -22,7 +22,7 @@ const SoldDetail = () => {
   const updateProduct = async () => {
     (await axios.patch(Api + `/products/${id}`, {
       sold: sold,
-    })) && navigate("/products");
+    })) && navigate("/salled");
   };
 
   return (
@@ -31,10 +31,10 @@ const SoldDetail = () => {
         onClick={() => updateProduct()}
         className="btn btn-danger btn-sm m-2"
       >
-        Return
+        Return Item
       </button>
       <button
-        onClick={() => navigate("/products")}
+        onClick={() => navigate("/salled")}
         className="btn btn-warning btn-sm m-2"
       >
         Cancel
