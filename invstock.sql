@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2022 at 11:17 PM
+-- Generation Time: Nov 30, 2022 at 09:46 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -42,7 +42,8 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`id`, `company`, `companycode`, `telephone`, `address`, `createdAt`, `updatedAt`) VALUES
-(21, 'Primamedi', 8473, 0, 'Tskneti hw #2', '2022-11-21', '2022-11-21 22:09:09.000000');
+(28, 'Buyer Company 1', 405405406, 555606606, 'Tskneti hw #2', '2022-11-23', '2022-11-23 19:03:20.159875'),
+(27, 'Buyer Company 2', 404404404, 555404404, 'Washington str. 10', '2022-11-23', '2022-11-23 19:03:31.595525');
 
 -- --------------------------------------------------------
 
@@ -67,6 +68,15 @@ CREATE TABLE `products` (
   `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `sku`, `name`, `price`, `buyfromcompany`, `approxprice`, `length`, `pieces`, `document`, `sold`, `soldtocompany`, `soldprice`, `deleted`, `createdAt`, `updatedAt`) VALUES
+(753, 'xx0363', 'SSD disk Kingston SA400S37/480G 500MB/s 450MB/s', '100', 'Shop', NULL, NULL, 1, 10, 10, '', NULL, 0, '2022-11-23 18:43:18', '2022-11-23 18:43:18'),
+(754, '0431-01', 'Adapter Cable SATA IDE to USB 3.0 External Hard', '15', 'Shop #2', NULL, NULL, 10, 10, 10, '', NULL, 0, '2022-11-23 18:44:17', '2022-11-23 18:44:34'),
+(755, 'xx0367', 'Blade II (Blu-ray Disc, 2009, Canadian)', '17', 'Ebay', NULL, NULL, 1, 10, 0, 'Buyer Company 1', '23', 0, '2022-11-23 19:17:22', '2022-11-29 14:29:34');
 
 -- --------------------------------------------------------
 
@@ -120,13 +130,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=751;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=757;
 
 --
 -- AUTO_INCREMENT for table `users`

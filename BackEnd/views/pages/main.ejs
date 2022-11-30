@@ -9,39 +9,49 @@
 </head>
 
 <body>
-    <h1>Welcome to my <span>Hell</span> API CRUD |\../|</h1>
-    <img src="https://miro.medium.com/proxy/0*eoMOYQ14tY2cxwxs.jpg" alt="">
-    <a href="/products" class="link">Check Products API</a>
-
+    <h1>Check API</h1>
+    <div class="LinkContainer">
+        <a href="/products" class="link" target="_blank">Products</a>
+        <a href="/companies" class="link" target="_blank">Companies</a>
+        <a href="/users" class="link" target="_blank">Users</a>
+    </div>
 
     <style>
         body {
-            display: flex;
             width: 500px;
-            justify-content: center;
-            flex-wrap: wrap;
             margin: 0 auto;
         }
+
         h1 {
             text-align: center;
         }
-        img {
-            width: 600px;
-            border-radius: 20px;
-            
+
+        .LinkContainer {
+            border: 1px solid slategray;
+            background-color: beige;
+            text-align: center;
+            padding: 10px;
         }
+
         .link {
             color: green;
             font-size: 18px;
             font-weight: 700;
             text-decoration: none;
-            margin-top: 50px;
+
+            margin-top: 350px;
+            padding: 20px;
         }
+
         .link:hover {
-            color: burlywood;
+            color: gray;
+       
+           
         }
-        h1 span {
-            color: red;
+
+        h1 {
+            color: slategray;
+            text-align: center;
         }
     </style>
 </body>
