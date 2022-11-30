@@ -1,6 +1,6 @@
 .AuthForm {
+  margin: 5% auto;
   .profile {
-    margin: 0 auto;
     text-align: left;
   }
   .AuthFormTbl {
@@ -15,7 +15,7 @@
       text-align: center;
       margin: 10px;
       border-radius: 8px;
-      border: 1px;
+      border: 1px solid skyblue;
     }
   }
   input:focus { outline: 1px solid skyblue; }
