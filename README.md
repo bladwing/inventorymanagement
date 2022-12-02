@@ -1,7 +1,11 @@
+<img src="https://i.imgur.com/jjpyI1O.png" width="200px">
+
 ## About Project
 
 
-This is small FullStack Project
+
+
+This is small Full Stack Project of Inventory Management
 
 I use several technologies:
 
@@ -105,8 +109,17 @@ After installation Follow link - **localhost:3000**
 Before Sign In please check **Program Guide** on Login page <img src="https://i.imgur.com/gssN9xb.png" width="40" height="40" />
 
 
-Login: **Admin** </br>
+Login: **Admin**
 Password: **123456**
 
+Live Demo - **[SunRise](https://invmanagersite.netlify.app)**
 
 ![](https://i.imgur.com/KipcKmH.png)
+
+
+
+
+
+
+
+
