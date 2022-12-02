@@ -110,17 +110,9 @@ After installation Follow link - **localhost:3000**
 Before Sign In please check **Program Guide** on Login page <img src="https://i.imgur.com/gssN9xb.png" width="40" height="40" />
 
 
-Login: **Admin**
-Password: **123456**
+Login: **Admin**</br>Password: **123456**
 
 Live Demo - **[SunRise](https://invmanagersite.netlify.com)**
 
 ![](https://i.imgur.com/KipcKmH.png)
-
-
-
-
-
-
-
 
