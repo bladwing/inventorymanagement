@@ -61,7 +61,8 @@ If you need to start my project on your computer, you need to done several steps
 
 Open => [Git Bash](https://git-scm.com/downloads)
 
-cd c:/"WorkingDirectory" for example my directory is "c:/web"
+`cd c:/"WorkingDirectory"  for example my directory is  "c:/web"`
+
 
 ```
 git clone git@github.com:bladwing/inventorymanagement.git
@@ -112,7 +113,7 @@ Before Sign In please check **Program Guide** on Login page <img src="https://i.
 Login: **Admin**
 Password: **123456**
 
-Live Demo - **[SunRise](https://invmanagersite.netlify.app)**
+Live Demo - **[SunRise](https://invmanagersite.netlify.com)**
 
 ![](https://i.imgur.com/KipcKmH.png)
 
