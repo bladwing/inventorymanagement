@@ -6,7 +6,7 @@ export default function ProductNav() {
         <Link to="/addproduct" className="btn btn-primary btn-sm m-2">
           Add Product
         </Link>
-        <Link to="/salled" className="btn btn-primary btn-sm m-2">
+        <Link to="/sold" className="btn btn-primary btn-sm m-2">
           Sold
         </Link>
       </div>

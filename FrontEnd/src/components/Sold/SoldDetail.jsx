@@ -22,7 +22,7 @@ const SoldDetail = () => {
   const updateProduct = async () => {
     (await axios.patch(Api + `/products/${id}`, {
       sold: sold,
-    })) && navigate("/salled");
+    })) && navigate("/sold");
   };
 
   return (
@@ -34,7 +34,7 @@ const SoldDetail = () => {
         Return Item
       </button>
       <button
-        onClick={() => navigate("/salled")}
+        onClick={() => navigate("/sold")}
         className="btn btn-warning btn-sm m-2"
       >
         Cancel
@@ -132,7 +132,6 @@ const SoldDetail = () => {
               <td>{Products.updatedAt}</td>
             </tr>
           </thead>
-          <tbody></tbody>
         </table>
       </div>
     </div>
