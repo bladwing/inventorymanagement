@@ -2,5 +2,5 @@
 
 
 
-export const Api = "https://invmanagerserver.herokuapp.com"
+export const Api = "http://localhost:3000"
 
