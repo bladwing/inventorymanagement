@@ -1,7 +1,3 @@
-# Draft in progress ....!<img src="https://i.imgur.com/hkpQOyy.gif" width="40" height="40" />
-
-
-
 ## About Project
 
 
@@ -13,8 +9,6 @@ I use several technologies:
 
 
 
-
-
 ## Technical Information
 
 
@@ -23,7 +17,7 @@ I use several technologies:
 React JS version: 18.2.0
 
 - In React logic I using [Hooks](https://reactjs.org/docs/hooks-intro.html) 
-- For visual side - [sass](https://sass-lang.com/) module. 
+- For visual side - [Bootstrap](https://getbootstrap.com/) 
 - Request generated with [Axios](https://axios-http.com/docs/intro) HTTP client and sending to NODE server(Back-End).
 - React App uploaded on [Netlify](https://productlistcrud.netlify.app/) hosting.
 
@@ -65,33 +59,42 @@ Open => [Git Bash](https://git-scm.com/downloads)
 
 cd c:/"WorkingDirectory" for example my directory is "c:/web"
 
+```
 git clone git@github.com:bladwing/inventorymanagement.git
-cd inventorymanagement/FrontEnd
-npm i
-npm start
 
-localhost:3000
+cd inventorymanagement/FrontEnd
+
+npm i
+
+npm start
+```
+
+Project will start automatically in default browser and available on this link - **localhost:3000**
 
 
 ### Node Server :electron:
 
+```
 Open another => [Git Bash](https://git-scm.com/downloads)
-cd inventorymanagement/BackEnd
-npm i
-npx nodemon
 
-localhost:5000
+cd inventorymanagement/BackEnd
+
+npm i
+
+npx nodemon
+```
+
+Available in browser on this link - **localhost:5000**
 
 
 ### Create mySQL server 
 I using [XAMPP](https://www.apachefriends.org/index.html) development environment
 
-inventorymanagement/config/invstock.sql
+Create in **phpMyAdmin** panel table with name - **invstock**
 
-Create in phpMyAdmin panel table with name - invstock
+Import database from file **invstock.sql** to your table - **invstock**
 
-Import database from file invstock.sql to your table - invstock
-
+NOTE: **invstock.sql** - Located in root directory of project.
 
 Enjoy Life.
 
@@ -102,15 +105,8 @@ After installation Follow link - **localhost:3000**
 Before Sign In please check **Program Guide** on Login page <img src="https://i.imgur.com/gssN9xb.png" width="40" height="40" />
 
 
-**Login:** Admin
-**Password:** 123456
+Login: **Admin**
+Password: **123456**
 
 
-
-
-
-
-
-
-
-
+![](https://i.imgur.com/KipcKmH.png)
