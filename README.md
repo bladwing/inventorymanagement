@@ -153,5 +153,5 @@ Live Demo - **[SunRise](https://invmanagersite.netlify.com)**
 <img src="https://i.imgur.com/nzi7myW.png" width="400"> 
 
 
-![](https://i.imgur.com/KipcKmH.png)
+![](https://i.imgur.com/hFphVbC.gif)
 
