@@ -1,7 +1,7 @@
 ## About Project
 
 
-This is small full stack Project
+This is small FullStack Project
 
 I use several technologies:
 
@@ -105,7 +105,7 @@ After installation Follow link - **localhost:3000**
 Before Sign In please check **Program Guide** on Login page <img src="https://i.imgur.com/gssN9xb.png" width="40" height="40" />
 
 
-Login: **Admin**
+Login: **Admin** </br>
 Password: **123456**
 
 
