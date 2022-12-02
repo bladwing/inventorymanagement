@@ -20,10 +20,10 @@ I use several technologies:
 
 React JS version: 18.2.0
 
-- In React logic I using [Hooks](https://reactjs.org/docs/hooks-intro.html) 
-- For visual side - [Bootstrap](https://getbootstrap.com/) 
-- Request generated with [Axios](https://axios-http.com/docs/intro) HTTP client and sending to NODE server(Back-End).
-- React App uploaded on [Netlify](https://productlistcrud.netlify.app/) hosting.
+- In React logic I using **[Hooks](https://reactjs.org/docs/hooks-intro.html)**
+- For visual side - **[Bootstrap](https://getbootstrap.com/)** 
+- Request generated with **[Axios](https://axios-http.com/docs/intro)** HTTP client and sending to NODE server(Back-End).
+- React App uploaded on **[Netlify](https://productlistcrud.netlify.app/)** hosting.
 
 
 ### :green_circle: Back-End
@@ -59,7 +59,7 @@ If you need to start my project on your computer, you need to done several steps
 
 ### React App :atom:
 
-Open => [Git Bash](https://git-scm.com/downloads)
+Open => **[Git Bash](https://git-scm.com/downloads)**
 
 `cd c:/"WorkingDirectory"  for example my directory is  "c:/web"`
 
@@ -79,9 +79,9 @@ Project will start automatically in default browser and available on this link -
 
 ### Node Server :electron:
 
-```
-Open another => [Git Bash](https://git-scm.com/downloads)
+Open another => **[Git Bash](https://git-scm.com/downloads)**
 
+```
 cd inventorymanagement/BackEnd
 
 npm i
@@ -93,7 +93,7 @@ Available in browser on this link - **localhost:5000**
 
 
 ### Create mySQL server 
-I using [XAMPP](https://www.apachefriends.org/index.html) development environment
+I using **[XAMPP](https://www.apachefriends.org/index.html)** development environment
 
 Create in **phpMyAdmin** panel table with name - **invstock**
 
@@ -101,7 +101,7 @@ Import database from file **invstock.sql** to your table - **invstock**
 
 NOTE: **invstock.sql** - Located in root directory of project.
 
-Enjoy Life.
+***Enjoy Life.***
 
 ## How to use? :underage:
 
