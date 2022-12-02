@@ -138,13 +138,7 @@ Live Demo - **[SunRise](https://invmanagersite.netlify.com)**
     - Create Buying history for each company - for good reporting
 - **Stock** 
     - Create counting logics 
-    **For example:**
-        Your amount 10 pieces of product with code x777 
-        You sell 3 pieces,
-        You need separate item with same code x777 
-      **Like that -**
-        in Stock keep 7 pieces with code x777
-        In Sold show 3 pieces with code x777
+    **For example:** </br> Your amount 10 pieces of product with code x777</br> You sell 3 pieces</br>You need separate item with same code x777</br>**Like that -**</br>in Stock keep 7 pieces with code x777</br>In Sold show 3 pieces with code x777
     - Create Pre-ordering Module
     - Create Several items order (when one company buy several item)
 - **Create Validation for all value in all module** 
@@ -154,4 +148,5 @@ Live Demo - **[SunRise](https://invmanagersite.netlify.com)**
 
 
 ![](https://i.imgur.com/hFphVbC.gif)
+
 
