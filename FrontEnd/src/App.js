@@ -10,6 +10,8 @@ import AddCompanies from "./pages/AddCompany";
 import Products from "./pages/Products";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
+import Orders from "./pages/Orders";
+import CreateOrder from "./pages/CreateOrder";
 import Sold from "./pages/Sold";
 
 import { userName } from "./utils/login";
@@ -42,6 +44,8 @@ function App() {
                 path="/products/editproduct/:id"
                 element={<EditProduct />}
               />
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/createorder" element={<CreateOrder />} />
               <Route path="/sold" element={<Sold />} />
               <Route path="/sold/:id" element={<SoldDetail />} />
             </Route>

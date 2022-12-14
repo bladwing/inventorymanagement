@@ -15,6 +15,9 @@ const Navigation = () => {
           <Link to="/products" className="btn btn-primary btn-sm m-2">
             Stock
           </Link>
+          <Link to="/orders" className="btn btn-primary btn-sm m-2">
+            Orders
+          </Link>
           <button onClick={LogOut} className="btn btn-danger btn-sm m-2">
             LogOut
           </button>
