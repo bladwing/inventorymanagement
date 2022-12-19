@@ -18,6 +18,15 @@ import {
   deleteCompany,
 } from "./controllers/Companies.js";
 
+
+import {
+  getAllOrders,
+  getOrderById,
+  createOrder,
+  updateOrder,
+  deleteOrder,
+} from "./controllers/Orders.js";
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -40,7 +49,11 @@ router.post("/companies/", createCompany);
 router.patch("/companies/:id", updateCompany);
 router.delete("/companies/delteById/:id", deleteCompany);
 
-
+router.get("/orders/",   getAllOrders);
+router.get("/orders/:id", getOrderById);
+router.post("/orders/", createOrder);
+router.patch("/orders/:id", updateOrder);
+router.delete("/orders/delteById/:id", deleteOrder);
 
 
 export default router;
