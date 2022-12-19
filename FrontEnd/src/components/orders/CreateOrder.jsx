@@ -1,6 +1,9 @@
 import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./orders.scss";
+
+import { Api } from "../../utils/api";
 
 export default function Createorder() {
   const form = useRef(null);
@@ -8,10 +11,33 @@ export default function Createorder() {
   const [error, setError] = useState(false);
   const [piecesView, setPiecesView] = useState("none");
 
-  const PiecesTemp = (e) => {
-    setPiecesView(e.target.value);
-    console.log(piecesView);
+
+//  const [orderNumber, setOrderNumber] = useState("");
+ const [ordcompanyname, setOrdcompanyname] = useState("");
+ const [ordproductname, setOrdproductname] = useState("");
+ const [ordproductpieces, setOrdproductpieces] = useState("");
+ const navigate = useNavigate();
+
+ const HandleSubmit = async (e) => {
+  e.preventDefault();
+
+  const inputs = {
+    ordcompanyname,
+    ordproductname,
+    ordproductpieces,
   };
+
+  await axios.post(Api + "/orders", inputs).then(function () {
+    setError("");
+    setOrdcompanyname("")
+    setOrdproductname("")
+    setOrdproductpieces("")
+    form.current.reset();
+    navigate("/orders");
+    console.log(inputs)
+  });
+};
+
 
   return (
     <div>
@@ -19,7 +45,7 @@ export default function Createorder() {
         {error}
       </div>
 
-      <form ref={form} className="order_form">
+      <form ref={form} className="order_form" onSubmit={HandleSubmit}>
         <table cellSpacing="10" className="mainTable">
           <tbody>
             <tr>
@@ -27,7 +53,7 @@ export default function Createorder() {
                 <label>Order: </label>
               </th>
               <td>
-                <input type="text" placeholder="Order Number" />
+                <input type="text" placeholder="Order Number" onChange={(e) => setOrdcompanyname(e.target.value)}/>
               </td>
             </tr>
 
@@ -36,10 +62,7 @@ export default function Createorder() {
                 <label>Company: </label>
               </th>
               <td>
-                <select>
-                  <option>Choose Company</option>
-                  <option></option>
-                </select>
+              <input type="text" placeholder="Order Number" onChange={(e) => setOrdproductname(e.target.value)}/>
               </td>
             </tr>
             <tr>
@@ -47,13 +70,10 @@ export default function Createorder() {
                 <label>Product: </label>
               </th>
               <td>
-                <select onChange={PiecesTemp}>
-                  <option value="none">Choose product</option>
-                  <option value={1}></option>
-                </select>
+              <input type="number" placeholder="Order Number" onChange={(e) => setOrdproductpieces(e.target.value)}/>
               </td>
               <td>
-                  <input type="text" placeholder="pieces" />
+                 
                 </td>
             </tr>
 
