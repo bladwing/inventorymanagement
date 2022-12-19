@@ -9,34 +9,35 @@ export default function Createorder() {
   const form = useRef(null);
 
   const [error, setError] = useState(false);
-  const [piecesView, setPiecesView] = useState("none");
+
+  const [ordcompanyname, setOrdcompanyname] = useState("");
+  const [ordproductname, setOrdproductname] = useState("");
+  const [ordproductpieces, setOrdproductpieces] = useState("");
+  const navigate = useNavigate();
 
 
-//  const [orderNumber, setOrderNumber] = useState("");
- const [ordcompanyname, setOrdcompanyname] = useState("");
- const [ordproductname, setOrdproductname] = useState("");
- const [ordproductpieces, setOrdproductpieces] = useState("");
- const navigate = useNavigate();
 
- const HandleSubmit = async (e) => {
-  e.preventDefault();
 
-  const inputs = {
-    ordcompanyname,
-    ordproductname,
-    ordproductpieces,
+  const HandleSubmit = async (e) => {
+    e.preventDefault();
+
+    const inputs = {
+      ordcompanyname,
+      ordproductname,
+      ordproductpieces,
+    };
+
+    await axios.post(Api + "/orders", inputs).then(function () {
+      setError("");
+      setOrdcompanyname("");
+      setOrdproductname("");
+      setOrdproductpieces("");
+      form.current.reset();
+      navigate("/orders");
+      console.log(inputs);
+    });
   };
 
-  await axios.post(Api + "/orders", inputs).then(function () {
-    setError("");
-    setOrdcompanyname("")
-    setOrdproductname("")
-    setOrdproductpieces("")
-    form.current.reset();
-    navigate("/orders");
-    console.log(inputs)
-  });
-};
 
 
   return (
@@ -45,7 +46,7 @@ export default function Createorder() {
         {error}
       </div>
 
-      <form ref={form} className="order_form" onSubmit={HandleSubmit}>
+      <form onSubmit={HandleSubmit} ref={form} className="order_form" >
         <table cellSpacing="10" className="mainTable">
           <tbody>
             <tr>
@@ -53,7 +54,11 @@ export default function Createorder() {
                 <label>Order: </label>
               </th>
               <td>
-                <input type="text" placeholder="Order Number" onChange={(e) => setOrdcompanyname(e.target.value)}/>
+                <input
+                  type="text"
+                  placeholder="Order Number"
+                  onChange={(e) => setOrdcompanyname(e.target.value)}
+                />
               </td>
             </tr>
 
@@ -62,7 +67,11 @@ export default function Createorder() {
                 <label>Company: </label>
               </th>
               <td>
-              <input type="text" placeholder="Order Number" onChange={(e) => setOrdproductname(e.target.value)}/>
+                <input
+                  type="text"
+                  placeholder="Order Number"
+                  onChange={(e) => setOrdproductname(e.target.value)}
+                />
               </td>
             </tr>
             <tr>
@@ -70,15 +79,14 @@ export default function Createorder() {
                 <label>Product: </label>
               </th>
               <td>
-              <input type="number" placeholder="Order Number" onChange={(e) => setOrdproductpieces(e.target.value)}/>
+                <input
+                  type="number"
+                  placeholder="Order Number"
+                  onChange={(e) => setOrdproductpieces(e.target.value)}
+                />
               </td>
-              <td>
-                 
-                </td>
+              <td></td>
             </tr>
-
-            
-      
           </tbody>
         </table>
         <div className="addPageButton">

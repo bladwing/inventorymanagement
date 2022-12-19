@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import OrderList from "../components/orders/Orders";
 
 
-const Orders = () => {
+const OrdersPage = () => {
   return (
     <div className="Container">
       <div className="TopContainer">
@@ -9,8 +10,9 @@ const Orders = () => {
         
       </div>
      <Link to="/createorder" className="btn btn-primary btn-sm m-2">Create Order</Link>
+     <OrderList/>
     </div>
-  );
+  );   
 };
 
-export default Orders;
+export default OrdersPage;

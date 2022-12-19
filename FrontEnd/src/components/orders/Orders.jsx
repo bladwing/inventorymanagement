@@ -1,36 +1,29 @@
-import { Link } from "react-router-dom";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Api } from "../../utils/api";
 
-
-import EmptyList from "../EmptyList";
-
-export default function Companies() {
-
+export default function OrderList() {
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
-    
+      return getOrders();
     }, 1000);
   }, []);
 
+  const getOrders = async () => {
+    const response = await axios.get(Api + "/orders");
+    setOrders(response.data);
+  };
 
   return (
     <div>
-      <Link to="/createorder" className="btn btn-primary btn-sm m-2">
-        Create Order
-      </Link>
-      <div className="productContainer">
-        {Loading ? (
-          <div className="loader-container ">
-            <div className="spinner"></div>
-          </div>
-        ) : companies.length === 0 ? (
-          ""
-        ) : (
-         ""
-        )}
-      </div>{" "}
+      {orders.map((order) => (
+        <div key={order.id}>
+          {order.ordcompanyname}
+          {order.id}hello
+        </div>
+      ))}
     </div>
   );
 }

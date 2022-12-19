@@ -3,7 +3,7 @@ import db from "../config/database.js";
 
 const { DataTypes } = Sequelize;
 
-const Orders = db.define("orders", {
+const Orders = db.define('orders', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
@@ -16,7 +16,7 @@ const Orders = db.define("orders", {
     type: DataTypes.STRING,
   },
   ordproductpieces: {
-    type: DataTypes.STRING,
+    type: DataTypes.DOUBLE,
   },
   createdAt: {
     type: DataTypes.DATE,
