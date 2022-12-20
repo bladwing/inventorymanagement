@@ -19,6 +19,7 @@ export default function ProductList() {
   }, []);
 
   const InStock = Products.filter((product) => product.sold !== false);
+  
   const getProducts = async () => {
     const response = await axios.get(Api + "/products");
     setLoading(false);

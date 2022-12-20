@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import SoldDetail from "./components/Sold/SoldDetail";
 import Footer from "./components/Footer";
+import OrderDetail from "./components/orders/OrderDetail";
 
 import HomePage from "./pages/HomePage.js";
 import Companies from "./pages/Companies";
@@ -19,6 +20,7 @@ import { userName } from "./utils/login";
 import Logo from "./img/sunrise.png";
 
 import "./App.scss";
+
 
 function App() {
   return (
@@ -45,6 +47,7 @@ function App() {
                 element={<EditProduct />}
               />
               <Route path="/orders" element={<Orders />} />
+              <Route path="/orders/:id" element={<OrderDetail />} />
               <Route path="/createorder" element={<CreateOrder />} />
               <Route path="/sold" element={<Sold />} />
               <Route path="/sold/:id" element={<SoldDetail />} />
