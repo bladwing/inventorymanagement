@@ -23,7 +23,7 @@ const Orders = db.define('orders', {
   },
   updatedAt: {
     type: DataTypes.DATE,
-  },
+  }
 });
 
 export default Orders;
