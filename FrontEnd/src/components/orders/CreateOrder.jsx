@@ -107,7 +107,7 @@ export default function Createorder() {
                 <input
                   type="number"
                   placeholder="Order Number"
-                  onChange={(e) => setOrdproductpieces(e.target.value)}
+                  onChange={(e)=> setOrdproductpieces(e.target.value)}
                 />
               </td>
               <td></td>

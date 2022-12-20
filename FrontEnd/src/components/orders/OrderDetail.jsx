@@ -15,8 +15,6 @@ export default function OrderDetail() {
     }
   }, [id]);
 
-
-
   return (
     <div>
       <table className="table">

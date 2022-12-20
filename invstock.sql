@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2022 at 09:46 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Dec 20, 2022 at 11:06 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,7 +35,7 @@ CREATE TABLE `companies` (
   `address` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `createdAt` date NOT NULL,
   `updatedAt` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `companies`
@@ -44,6 +44,29 @@ CREATE TABLE `companies` (
 INSERT INTO `companies` (`id`, `company`, `companycode`, `telephone`, `address`, `createdAt`, `updatedAt`) VALUES
 (28, 'Buyer Company 1', 405405406, 555606606, 'Tskneti hw #2', '2022-11-23', '2022-11-23 19:03:20.159875'),
 (27, 'Buyer Company 2', 404404404, 555404404, 'Washington str. 10', '2022-11-23', '2022-11-23 19:03:31.595525');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `ordcompanyname` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `ordproductname` varchar(25) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `ordproductpieces` int(11) NOT NULL,
+  `createdAt` date NOT NULL,
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `ordcompanyname`, `ordproductname`, `ordproductpieces`, `createdAt`, `updatedAt`) VALUES
+(6, 'Buyer Company 2', 'Blade II (Blu-ray Di', 10, '2022-12-20', '2022-12-20 21:06:53'),
+(7, 'Buyer Company 2', 'Adapter Cable SATA IDE to', 2, '2022-12-20', '2022-12-20 21:43:18');
 
 -- --------------------------------------------------------
 
@@ -67,7 +90,7 @@ CREATE TABLE `products` (
   `deleted` tinyint(1) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `products`
@@ -86,9 +109,9 @@ INSERT INTO `products` (`id`, `sku`, `name`, `price`, `buyfromcompany`, `approxp
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `pwd` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` text NOT NULL,
+  `lastname` text NOT NULL,
+  `pwd` text NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `createdAt` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -108,6 +131,12 @@ INSERT INTO `users` (`id`, `name`, `lastname`, `pwd`, `updatedAt`, `createdAt`) 
 -- Indexes for table `companies`
 --
 ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -133,10 +162,16 @@ ALTER TABLE `companies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=757;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=758;
 
 --
 -- AUTO_INCREMENT for table `users`
