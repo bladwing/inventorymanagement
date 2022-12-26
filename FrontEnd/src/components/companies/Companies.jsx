@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Api } from "../../utils/api";
 
 import { MdDelete } from "react-icons/md";
+import { FcEditImage } from "react-icons/fc";
 import EmptyList from "../EmptyList";
 
 export default function Companies() {
@@ -39,7 +40,7 @@ export default function Companies() {
             <div className="spinner"></div>
           </div>
         ) : companies.length === 0 ? (
-          <EmptyList/>
+          <EmptyList />
         ) : (
           <table style={{ margin: "0 auto", width: "60%" }} className="table">
             <thead>
@@ -65,6 +66,9 @@ export default function Companies() {
 
                   <th>{Company.address}</th>
                   <th>
+                    <Link to={`editcompany/${Company.id}`}>
+                      <FcEditImage size={30} />
+                    </Link>
                     <button
                       onClick={() => deleteCompany(Company.id)}
                       style={{

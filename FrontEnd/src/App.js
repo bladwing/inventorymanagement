@@ -20,6 +20,7 @@ import { userName } from "./utils/login";
 import Logo from "./img/sunrise.png";
 
 import "./App.scss";
+import EditCompanyPage from "./pages/EditCompany";
 
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
           ) : (
             <Route>
               <Route path="/companies" element={<Companies />} />
+              <Route
+                path="/companies/editcompany/:id"
+                element={<EditCompanyPage />}
+              />
               <Route path="/addcompanies" element={<AddCompanies />} />
               <Route path="/products" element={<Products />} />
               <Route path="/addproduct" element={<AddProduct />} />
