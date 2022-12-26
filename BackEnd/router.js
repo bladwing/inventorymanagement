@@ -27,6 +27,12 @@ import {
   deleteOrder,
 } from "./controllers/Orders.js";
 
+
+import {
+  getAllInfo,
+  updateInfo,
+} from "./controllers/Info.js";
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -55,5 +61,8 @@ router.post("/orders/", createOrder);
 router.patch("/orders/:id", updateOrder);
 router.delete("/orders/delteById/:id", deleteOrder);
 
+
+router.get("/info/", getAllInfo);
+router.patch("/info/:id", updateInfo);
 
 export default router;

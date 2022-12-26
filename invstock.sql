@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2022 at 11:06 PM
+-- Generation Time: Dec 26, 2022 at 10:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -42,8 +42,25 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`id`, `company`, `companycode`, `telephone`, `address`, `createdAt`, `updatedAt`) VALUES
-(28, 'Buyer Company 1', 405405406, 555606606, 'Tskneti hw #2', '2022-11-23', '2022-11-23 19:03:20.159875'),
+(28, 'Buyer Company 1', 405405406, 555606608, 'Tskneti hw #2', '2022-11-23', '2022-12-26 15:14:16.000000'),
 (27, 'Buyer Company 2', 404404404, 555404404, 'Washington str. 10', '2022-11-23', '2022-11-23 19:03:31.595525');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `infos`
+--
+
+CREATE TABLE `infos` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `code` int(20) NOT NULL,
+  `account` varchar(25) NOT NULL,
+  `address` varchar(20) NOT NULL,
+  `telephone` int(10) NOT NULL,
+  `createdAt` date NOT NULL DEFAULT current_timestamp(),
+  `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -134,6 +151,12 @@ ALTER TABLE `companies`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `infos`
+--
+ALTER TABLE `infos`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -160,6 +183,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `companies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `infos`
+--
+ALTER TABLE `infos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`
