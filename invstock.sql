@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2022 at 10:52 PM
+-- Generation Time: Dec 26, 2022 at 11:44 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -61,6 +61,13 @@ CREATE TABLE `infos` (
   `createdAt` date NOT NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `infos`
+--
+
+INSERT INTO `infos` (`id`, `name`, `code`, `account`, `address`, `telephone`, `createdAt`, `updatedAt`) VALUES
+(1, '', 0, '', '', 0, '2022-12-20', '2022-12-26 22:43:40');
 
 -- --------------------------------------------------------
 
@@ -188,7 +195,7 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `infos`
 --
 ALTER TABLE `infos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `orders`

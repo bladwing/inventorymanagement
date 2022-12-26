@@ -8,7 +8,18 @@ export const getAllInfo = async (req, res) => {
     res.json({ message: error.message });
   }
 };
-
+export const getOrderById = async (req, res) => {
+  try {
+    const info = await Info.findAll({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.json(info[0]);
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+};
 export const updateInfo = async (req, res) => {
   try {
     await Info.update(req.body, {
