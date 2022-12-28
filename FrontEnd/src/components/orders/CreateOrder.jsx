@@ -19,6 +19,9 @@ export default function Createorder() {
   const [ordcompanyname, setOrdcompanyname] = useState("");
   const [ordproductname, setOrdproductname] = useState("");
   const [ordproductpieces, setOrdproductpieces] = useState("");
+  const [ordproductprice, setOrdproductprice] = useState("");
+  const [ordtotal, setOrdtotal] = useState("");
+
   const [companies, setCompanies] = useState([]);
   const [Products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -59,13 +62,19 @@ export default function Createorder() {
         {error}
       </div>
 
-      <form onSubmit={HandleSubmit} ref={form} className="order_form">
-        <table cellSpacing="10" className="mainTable">
+      <form onSubmit={HandleSubmit} ref={form}>
+        <table cellSpacing="10" className="table">
+          <thead>
+            <tr>
+              <td>Company</td>
+              <td>Product</td>
+              <td>Pieces</td>
+              <td>Price</td>
+              <td>Total</td>
+            </tr>
+          </thead>
           <tbody>
             <tr>
-              <th>
-                <label>Company: </label>
-              </th>
               <td>
                 <select
                   name=""
@@ -79,12 +88,7 @@ export default function Createorder() {
                   ))}
                 </select>
               </td>
-            </tr>
 
-            <tr>
-              <th>
-                <label>Product: </label>
-              </th>
               <td>
                 <select
                   name=""
@@ -98,19 +102,23 @@ export default function Createorder() {
                   ))}
                 </select>
               </td>
-            </tr>
-            <tr>
-              <th>
-                <label>Pieces: </label>
-              </th>
               <td>
                 <input
                   type="number"
-                  placeholder="Order Number"
-                  onChange={(e)=> setOrdproductpieces(e.target.value)}
+                  style={{ width: "20%", textAlign: "center" }}
+                  placeholder="0"
+                  onChange={(e) => setOrdproductprice(e.target.value)}
                 />
               </td>
-              <td></td>
+              <td>
+                <input
+                  type="number"
+                  style={{ width: "20%", textAlign: "center" }}
+                  placeholder="0"
+                  onChange={(e) => setOrdproductpieces(e.target.value)}
+                />
+              </td>
+              <td>{ordproductprice + ordproductpieces}</td>
             </tr>
           </tbody>
         </table>
