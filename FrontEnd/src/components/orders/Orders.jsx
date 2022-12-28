@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import EmptyList from "../EmptyList"
 import { Link } from "react-router-dom";
 import { Api } from "../../utils/api";
 
 export default function OrderList() {
   const [orders, setOrders] = useState([]);
   const reversed = [...orders].reverse();
+  const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,6 +18,7 @@ export default function OrderList() {
   const getOrders = async () => {
     const response = await axios.get(Api + "/orders");
     setOrders(response.data);
+    setLoading(false)
   };
 
   const deleteOrder = async (id) => {
@@ -26,6 +29,14 @@ export default function OrderList() {
 
   return (
     <div>
+       {Loading ? (
+          <div className="loader-container" style={{width: "100%"}}>
+            <div className="spinner"></div>
+          </div>
+        ) : orders.length === 0 ? (
+          <EmptyList />
+        ) : (
+     
       <table className="table">
         <thead>
           <tr>
@@ -46,6 +57,7 @@ export default function OrderList() {
           </tbody>
         ))}
       </table>
+        )}
     </div>
   );
 }
