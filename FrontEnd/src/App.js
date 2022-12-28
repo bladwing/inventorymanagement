@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import SoldDetail from "./components/Sold/SoldDetail";
 import Footer from "./components/Footer";
 import OrderDetail from "./components/orders/OrderDetail";
+import EditCompanyInfo from "./components/companyinfo/EditCompanyInfo";
 
 import HomePage from "./pages/HomePage.js";
 import Companies from "./pages/Companies";
@@ -34,6 +35,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/editInfo" element={<EditCompanyInfo />} />
 
           {userName === null ? (
             <Route path="/*" element={<HomePage />} />

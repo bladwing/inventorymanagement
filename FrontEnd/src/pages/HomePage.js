@@ -1,20 +1,14 @@
 import Auth from "../components/auth/Auth";
-import Guide from "../components/guide/Guide";
 import { userName } from "../utils/login";
-import CompanyInfo from "../components/CompanyInfo";
-
-
-
+import CompanyInfo from "../components/companyinfo/CompanyInfo";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <div className="Container">
       {userName !== null ? (
         <div className="homePage">
-    
-           <CompanyInfo/>
-            
-         
+          <CompanyInfo />
         </div>
       ) : (
         <Auth />

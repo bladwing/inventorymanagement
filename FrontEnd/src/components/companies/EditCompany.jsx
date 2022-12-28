@@ -37,7 +37,6 @@ const EditCompany = () => {
   };
 
   return (
-  
       <form onSubmit={updateCompany} className="product_form">
         <table cellSpacing="10" className="mainTable">
           <tbody>
