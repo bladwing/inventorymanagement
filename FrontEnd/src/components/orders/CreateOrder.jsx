@@ -61,12 +61,24 @@ export default function Createorder() {
       <div id="message" className="message">
         {error}
       </div>
-
       <form onSubmit={HandleSubmit} ref={form}>
         <table cellSpacing="10" className="table">
           <thead>
             <tr>
-              <td>Company</td>
+              <td>
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => setOrdcompanyname(e.target.value)}
+                >
+                  <option value="">Choose Company</option>
+                  {companies.map((name) => (
+                    <option value={name.company} key={name.id}>
+                      {name.company}
+                    </option>
+                  ))}
+                </select>
+              </td>
               <td>Product</td>
               <td>Pieces</td>
               <td>Price</td>
@@ -75,26 +87,14 @@ export default function Createorder() {
           </thead>
           <tbody>
             <tr>
-              <td>
-                <select
-                  name=""
-                  id=""
-                  onChange={(e) => setOrdcompanyname(e.target.value)}
-                >
-                  {companies.map((name) => (
-                    <option value={name.company} key={name.id}>
-                      {name.company}
-                    </option>
-                  ))}
-                </select>
-              </td>
-
+              <td></td>
               <td>
                 <select
                   name=""
                   id=""
                   onChange={(e) => setOrdproductname(e.target.value)}
                 >
+                  <option value="">Choose Product</option>
                   {Products.map((product) => (
                     <option value={product.name} key={product.id}>
                       {product.name}
@@ -107,7 +107,7 @@ export default function Createorder() {
                   type="number"
                   style={{ width: "20%", textAlign: "center" }}
                   placeholder="0"
-                  onChange={(e) => setOrdproductprice(e.target.value)}
+                  onChange={(e) => setOrdproductpieces(e.target.value)}
                 />
               </td>
               <td>
@@ -115,10 +115,10 @@ export default function Createorder() {
                   type="number"
                   style={{ width: "20%", textAlign: "center" }}
                   placeholder="0"
-                  onChange={(e) => setOrdproductpieces(e.target.value)}
+                  onChange={(e) => setOrdproductprice(e.target.value)}
                 />
               </td>
-              <td>{ordproductprice + ordproductpieces}</td>
+              <td>{ordproductprice * ordproductpieces}</td>
             </tr>
           </tbody>
         </table>
